@@ -26,7 +26,7 @@ Google = dsp.Google
 GoogleVertexAI = dsp.GoogleVertexAI
 GROQ = dsp.GroqLM
 Claude = dsp.Claude
-
+VolcEngineMaas = dsp.VolcEngineMaaS
 HFClientTGI = dsp.HFClientTGI
 HFClientVLLM = HFClientVLLM
 
