@@ -122,14 +122,14 @@ class VolcEngineMaaS(LM):
             "prompt": prompt,
             "response": {
                 "prompt": prompt,
-                "choices": [response.choice.message.content],
+                "choices": response['choices'],
             },
             "kwargs": kwargs,
             "raw_kwargs": raw_kwargs,
         }
         self.history.append(history)
 
-        return [response.choice.message.content]
+        return [dic['message']['content'] for dic in response['choices']]
 
     @backoff.on_exception(
         backoff.expo,
